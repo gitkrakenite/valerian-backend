@@ -15,6 +15,7 @@ app.use(express.json());
 app.use(cors());
 
 // API
+app.get("/", (req, res) => res.json({ message: "Server working" }));
 app.use("/api/import", ImportData);
 app.use("/api/products", productRoute);
 app.use("/api/users", userRouter);
